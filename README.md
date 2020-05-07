@@ -1,5 +1,5 @@
 ## Screenshots
-![](https://i.imgur.com/u8i4EPg.png)
+![](https://imgur.com/nzRXx6l.png)
 ## Installation
 1.rm -rf dotfiles
 
