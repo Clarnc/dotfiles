@@ -1,0 +1,39 @@
+#! /bin/sh
+sxhkd &
+wmname LG3D &
+xboxdrv -D --detach-kernel-driver --silent --dbus disabled &
+picom --vsync &
+dunst -config $HOME/.config/dunst/dunstrc &
+#feh --bg-fill $HOME/Wallpapers/new.png &&
+wal -o $HOME/Scripts/Xresources_ln.sh -o $HOME/Scripts/rofi_fixer.sh -o $HOME/Scripts/dunst_ln.sh -i $HOME/Wallpapers/10.jpg
+
+#python3 $HOME/Scripts/wal_steam/wal_steam.py -w -d -s $HOME/.local/share/Steam/skins
+polybar main &
+#exec --no-startup-id feh --bg-fill ~/Wallpapers/1.jpg
+bspc monitor -d 1 2 3 4 5 6 7 8 9 10
+#bash /home/localcc/Scripts/SpaceChanger.sh &
+bspc config border_width         0
+bspc config window_gap          6
+bspc config top_padding		18
+
+bspc config split_ratio          0.5
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+bspc config ignore_ewmh_focus true
+
+setxkbmap pl,ru
+setxkbmap -option 'grp:win_space_toggle'
+kitty bash -c "neofetch; bash" &
+
+#declaring rules
+bspc rule -a discord desktop=^9
+bspc rule -a firefox desktop=^2
+bspc rule -a Steam desktop=^10
+
+#launching applications
+discord-canary &
+discord-ptb &
+steam &
+flameshot &
+
+betterlockscreen -u $HOME/Wallpapers/8.jpg
