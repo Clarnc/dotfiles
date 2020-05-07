@@ -44,16 +44,16 @@ module-margin-right = 1
 
 
 font-0 = sans-serif:style=Bold:size=11.2:antialias=true;2
-font-1 = FiraFlott:style=Italic:size=11.2:antialias=true;2
-font-2 = unifont:fontformat=truetype:size=11.2:antialias=false;2
-font-3 = siji:pixelsize=11.2;2
-font-4 = FontAwesome 5 Free:size=11.2:style=Solid;2
-font-5 = Material Icons:style=Regular;2
-font-6 = Weather Icons:size=11.2;2
-font-7 = Vitorino:pixelsize=11;2
-font-8 = FontAwesome 4 Brands:pixelsize=12;2
-font-9 = fontawesome4brands:pixelsize=12;2
-font-10 = FontAwesome 5 Free:pixelsize=11.2;2
+;font-1 = FiraFlott:style=Italic:size=11.2:antialias=true;2
+;font-2 = unifont:fontformat=truetype:size=11.2:antialias=false;2
+;font-3 = siji:pixelsize=11.2;2
+font-1 = FontAwesome 5 Free:size=11.2:style=Solid;2
+;font-5 = Material Icons:style=Regular;2
+;font-6 = Weather Icons:size=11.2;2
+;font-7 = Vitorino:pixelsize=11;2
+font-2 = FontAwesome 5 Brands:pixelsize=12;2
+font-3 = fontawesome4brands:pixelsize=12;2
+font-4 = FontAwesome 5 Free:pixelsize=11.2;2
 
 ;modules-left = menu i3
 modules-left = bspwm
@@ -108,9 +108,8 @@ label-urgent-padding = 2
 
 [module/spotify_status]
 type = custom/script
-;format-prefix = "   "
-;
-;format-prefix-foreground = #1DB954
+format-prefix = "   "
+format-prefix-foreground = #1DB954
 format-underline = #1DB954
 interval = 1
 format = <label>
