@@ -58,7 +58,7 @@ font-4 = FontAwesome 5 Free:pixelsize=11.2;2
 ;modules-left = menu i3
 modules-left = bspwm
 ;modules-center = bspwm
-modules-right = spotify_status date memory powermenu
+modules-right = spotify_status date nvidia_info memory powermenu
 
 
 tray-position = right
@@ -200,29 +200,34 @@ label-open = 
 ;label-open-background = ${colors.alert}
 label-open-foreground = #ffffff
 label-open-padding = 2
-label-close = 
+label-close = "  "
 label-close-foreground = #ffffff
 format-underline = #ff0000
 
-menu-0-0 = 
+menu-0-0 ="  "
 menu-0-0-exec = reboot
 
 label-separator = " "
 ;label-separator-foreground = ${colors.foreground}
 
-menu-0-1 = 
+menu-0-1 = "  "
 menu-0-1-exec = poweroff
 
-menu-0-2 = 
+menu-0-2 = "  "
 menu-0-2-exec = betterlockscreen -s dim
 
 [module/memory]
 type = internal/memory
 interval = 1
-format-prefix = ""
+format-prefix = "  "
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #4bffdc
 label = %percentage_used%%
 
-
+[module/nvidia_info]
+type = custom/script
+tail = true
+exec-if = nvidia-smi
+exec = nvidia-smi --loop=1 --query-gpu=temperature.gpu,utilization.gpu,utilization.memory --format=csv,noheader,nounits | sed -ur 's|([[:digit:]]+)[^[:digit:]]*([[:digit:]]+)[^[:digit:]]*([[:digit:]]+)|GPU \2% \3% \1°|g'
+format-underline =${colors.foreground}
 ; vim:ft=dosini
