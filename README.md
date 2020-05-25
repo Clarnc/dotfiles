@@ -1,5 +1,5 @@
 ## Screenshots
-![](https://imgur.com/a/Kt2toVm.png)
+![](https://imgur.com/Kt2toVm.png)
 ![](https://imgur.com/Cbk4LOO.png)
 ![](https://imgur.com/dre3Pd0.png)
 
